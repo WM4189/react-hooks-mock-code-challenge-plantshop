@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Aloe",
       "image": "./images/aloe.jpg",
-      "price": 15.99
+      "price": 53
     },
     {
       "id": 2,
@@ -41,12 +41,6 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
-    },
-    {
-      "id": "9716682c-8408-4ec6-8881-c508735c4465",
-      "name": "William Mosto",
-      "image": "https://foodinjapan.org/wp-content/uploads/2020/09/wakayama.jpg",
-      "price": "0.04"
     }
   ]
 }

@@ -20,13 +20,29 @@ function App() {
     setPlantData([...plantData,newPlant])
   }
 
-  
+  function increasePlantPrice(id, price){
+    console.log(id, price)
+    const updatePrice = plantData.map(plant => {
+      if(plant.id === id) {
+        return {...plant, price}
+      } else {
+        return plant
+      }
+    })
+    setPlantData(updatePrice)
+  }
+
+function deletePlant(id){
+  const updatedPlants = plantData.filter(plant => plant.id !== id)
+  setPlantData(updatedPlants)
+}
+
 
  
   return (
     <div className="app">
       <Header />
-      <PlantPage search={search} setSearch={setSearch} onPlantFormSubmit={handlePlantFormSubmit} plantData={filteredList} />
+      <PlantPage onPlantPrice={increasePlantPrice} onPlantDelete={deletePlant} search={search} setSearch={setSearch} onPlantFormSubmit={handlePlantFormSubmit} plantData={filteredList} />
     </div>
   );
 }
